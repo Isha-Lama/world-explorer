@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 WorldExplorer
 
-## Getting Started
+A modern web application built with **Next.js 14** and **Tailwind CSS** to explore data from countries all over the world. This project uses the [REST Countries API](https://restcountries.com/) to provide up-to-date information in a clean, responsive interface.
 
-First, run the development server:
+🔗 **Live Demo:** [Insert Your Vercel Link Here]
+
+---
+
+## 🚀 Project Overview
+
+**WorldExplorer** allows users to search, filter, and view detailed information about 195+ countries. The app is optimized for performance with pagination and smooth entrance animations.
+
+---
+
+## ✨ Key Features
+
+- 🔍 **Real-time Search** — Search for countries by name or capital instantly.
+- 📄 **Pagination** — Loads 25 countries at a time for better performance.
+- 📱 **Responsive Layout** — Fully optimized for mobile, tablet, and desktop devices.
+- 🎬 **Animations** — Custom staggered CSS animations for a smooth UI experience.
+
+---
+
+## 🛠️ Local Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Isha-Lama/world-explorer.git
+cd world-explorer
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the App
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Open in Browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit: [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📡 API Details
 
-To learn more about Next.js, take a look at the following resources:
+| Field | Value |
+|---|---|
+| **Data Source** | [REST Countries API](https://restcountries.com/) |
+| **Endpoint** | `/v3.1/all` |
+| **Fields Used** | Flags, Country Name, Capital, Population, Region, Languages |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design Decisions
 
-## Deploy on Vercel
+- **🎯 3-Column Grid Layout** — Provides better readability and a premium card-style UI on larger screens.
+- **🎨 Brand Identity** — Blue-to-purple gradient theme for a modern and clean aesthetic.
+- **✨ Animations** — Staggered entrance effects implemented using global CSS for smooth transitions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 Challenges & Solutions
+
+### ⚡ Performance Issue
+**Problem:** Rendering all countries at once caused lag.  
+**Solution:** Implemented a "Show More" button to load countries in chunks of 25.
+
+### 🔎 Filtering Optimization
+**Problem:** Real-time search caused unnecessary re-renders.  
+**Solution:** Used `useMemo` to optimize filtering and maintain smooth performance while typing.
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Landing Page
+
+> <img width="550" height="801" alt="image" src="https://github.com/user-attachments/assets/8c7d8844-f9d6-45ed-aa93-35c05fa221e5" />
+
+
+### 🌍 Explore Page
+> <img width="1082" height="923" alt="image" src="https://github.com/user-attachments/assets/25024153-45d1-41f8-8858-f03216e94386" />
+
+
+---
+
+## 🧑‍💻 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | Next.js 14 |
+| **Styling** | Tailwind CSS |
+| **API** | REST Countries API |
+| **Deployment** | Vercel |
+
+---
+
+## 📄 License
+Developed by Isha Ghising.
