@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --bg-gradient: linear-gradient(
+    135deg, 
+    rgba(210, 231, 251, 0.50) 0%, 
+    rgba(255, 255, 255, 0.50) 50%, 
+    rgba(204, 181, 226, 0.50) 100%
+  );
+  --foreground: #111827;
+}
+
+/* Using @layer base ensures this doesn't get overridden by Tailwind's reset */
+@layer base {
+  body {
+    background: var(--bg-gradient) !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat;
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+  }
+
+  @keyframes slideInLeft {
+    0% { transform: translateX(-60px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slideInRight {
+    0% { transform: translateX(60px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+}
+
+@utility text-gradient {
+  background: linear-gradient(90deg, #155DFC 0%, #9810FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@layer utilities {
+  @keyframes navDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-nav-down {
+    animation: navDown 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-hero-left {
+    animation: slideInLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-hero-right {
+    animation: slideInRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes statsUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-stats-up {
+    animation: statsUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.96) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .animate-stats-up {
+    animation: popIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+}
