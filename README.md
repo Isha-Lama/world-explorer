@@ -2,7 +2,7 @@
 
 A modern web application built with **Next.js 14** and **Tailwind CSS** to explore data from countries all over the world. This project uses the [REST Countries API](https://restcountries.com/) to provide up-to-date information in a clean, responsive interface.
 
-🔗 **Live Demo:** [Insert Your Vercel Link Here]
+🔗 **Live Demo:** https://world-explorer-gilt.vercel.app/
 
 ---
 
